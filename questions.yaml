@@ -60,3 +60,43 @@ questions:
   - value: Database
     correct: true
   - value: Cache
+
+- title: Why is it recommended to start a project with a custom user model?
+  type: full_text
+
+- title: What does the following code do?
+  type: single_choice
+  body: |
+    ~~~python
+    from django.db import models
+
+    class OfficeBuildingsManager(models.Manager):
+        def get_queryset(self):
+            return super().get_queryset().filter(building_type='office')
+
+    class Building(models.Model):
+        offices = OfficeBuildingsManager()
+
+    all_buildings = Builing.objects.all()
+    ~~~
+  options:
+    - value: Loads all buildings including offices to all_buildings variable
+    - value: Throws `AttributeError` exception
+      correct: true
+
+- title: How to structure your Django app so that it is re-usable in other Django projects?
+  type: full_text
+
+- title: What is the possible exception that can be thrown by this code?
+  body: |
+    ~~~python
+    Company.objects.order_by('created_at')[0:1].get()
+    ~~~
+  type: multi_choice
+  options:
+    - value: Company.DoesNotExist
+      correct: true
+    - value: IndexError
+    - value: both of these exceptions
+    - value: none of these exceptions
+
