@@ -1,53 +1,62 @@
 # yaml-language-server: $schema=https://webscope-hiring.herokuapp.com/api/questions-schema/
 questions:
-  # This is an example of a single choice question
-  - title: Who was the captain in the first pilot episode of the original Star Trek Series?
-    type: single_choice
-    hint: His name rhymes with "bike"
-    options:
-      - value: Captain America
-        correct: true
-      - value: Christopher Pike
-        correct: true
-      - value: This is a new answer
-      - value: Christopher Columbus
-    body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!');
-      ~~~
+- title: Can you please briefly explain Django's system architecture 
+  type: full_text
+  
+- title: Which ones of the following commands will create files in your filesystem?
+  type: multi_choice
+  options:
+  - value: ./manage.py makemigrations
+    correct: true
+  - value: ./manage.py migrate
+  - value: ./manage.py sqlmigrate
 
-      And here is another:
+- title: Can you please describe the pros & cons of Django's ORM?
+  type: full_text
 
-      ~~~js
-      console.log('It works again!');
-      ~~~
-    # This is an example of a multi choice question
-  - title: Which of these characters from Game of Thrones series died?
-    type: multi_choice
-    hint: There was a lot of dying...
-    options:
-      - value: Sersei Lannister
-        correct: true
-      - value: Robb Stark
-        correct: true
-      - value: Hodor
+- title: Does Django support NoSQL? If so, how?
+  type: full_text
 
-  # This is an example of a full-text question (answers for full-text-questions are optional)
-  - title: If you store a pokemon in a PC does it become a digimon?
-    type: full_text
+- title: What is CRSF protection and how it's implemented in Django?
+  type: full_text
 
-  # This is an example of a question with body
-  - title: If you store a pokemon in a PC does it become a digimon?
-    type: full_text
-    body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!')
-      ~~~
+- title: Which one of the following code snipets will trigger a post_save signal?
+  type: multi_choice
+  body: |
+    - Code snippet no. 1
+    ~~~python
+    User.objects.filter(pk=10).update(name="John")
+    ~~~
+    - Code snippet no. 2
+    ~~~python
+    User.objects.get(pk=10).save(name="John")
+    ~~~
+  options:
+  - value: Code snippet no. 1
+  - value: Code snippet no. 2
+  - value: Both
+  - value: None
 
-      And here is another:
+- title: What is the typical usage of Django's middleware?
+  type: multi_choice
+  options:
+  - value: Cross-Site request forgery protection
+    correct: true
+  - value: Rendering a template
+  - value: Session management
+    correct: true
+  - value: Authentication handling
+    correct: true
+  - value: Querying database
 
-      ~~~js
-      console.log('It works again!')
-      ~~~
+- title: What is the typical structure of Django's application?
+  type: full_text
+
+- title: Where does Django store information about SQL migrations?
+  type: multi_choice
+  options:
+  - value: Filesystem
+    correct: true
+  - value: Database
+    correct: true
+  - value: Cache
