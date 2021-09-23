@@ -77,7 +77,7 @@ questions:
     class Building(models.Model):
         offices = OfficeBuildingsManager()
 
-    all_buildings = Builing.objects.all()
+    all_buildings = Building.objects.all()
     ~~~
   options:
     - value: Loads all buildings including offices to all_buildings variable
@@ -99,4 +99,13 @@ questions:
     - value: IndexError
     - value: both of these exceptions
     - value: none of these exceptions
+
+- title: How is Django's admin interface customizable?
+  type: full_text
+
+- title: What is a Meta class on Django's models and what do we use it for?
+  type: full_text
+
+- title: What is Django REST framework and how does it work?
+  type: full_text
 
