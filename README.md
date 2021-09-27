@@ -74,7 +74,8 @@ User.objects.get(pk=10).save(name="John")
 <summary>What does the following code do? | <i>Single choice answer</i></summary>
 
 - [ ] Loads all buildings including offices to all_buildings variable
-- [x] Throws `AttributeError` exception~~~python
+- [x] Throws `AttributeError` exception
+~~~python3
 from django.db import models
 
 class OfficeBuildingsManager(models.Manager):
