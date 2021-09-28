@@ -34,6 +34,7 @@ questions:
   options:
   - value: Code snippet no. 1
   - value: Code snippet no. 2
+    correct: true
   - value: Both
   - value: None
 
