@@ -1,4 +1,4 @@
-![Image header](https://github.com/hiredev-app/django-interview-questions/blob/readme-edit/image-header.png?raw=true)
+![Image header](https://github.com/hiredev-app/django-interview-questions/blob/main/image-header.png?raw=true)
 ## Questions
 
 <details><summary>Can you please briefly explain Django's system architecture</summary>
